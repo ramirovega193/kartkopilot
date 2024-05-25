@@ -20,6 +20,9 @@
     }
 }
 
+
+
+
 .contenedor-header{
     height: 100vh;
     background-color: var(--vg-primary-bg);
@@ -63,18 +66,19 @@
     width: 100%;
 }
 .contenedor-cartas{
-    margin-top: 100px;
+    margin-top: 250px;
 }
 .inicio-cards{
     display: flex;
-    padding: 10px;
+    padding: 20px;
 }
 .cards{
     margin: 20px;
     justify-content: center;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 33%;
 }
 
 .cards.visible{
@@ -82,11 +86,121 @@
     transform: translateY(0);
 }
 .card1{
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 .card2{
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
 }
 .card3{
-    transition-delay: 0.7s;
+    transition-delay: 0.3s;
+}
+
+
+
+.i-imagen-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    box-sizing: border-box;
+}
+
+.i-imagen-texto{    
+
+    padding: 50px;
+    font-size: 24px;
+    width: 40%;
+
+}
+.i-imagen-texto h2{
+    color: var(--vg-primary-str);
+}
+
+
+.i-imagen-texto p{
+
+    margin-top: 20px;
+
+}
+
+.i-imagen-img{
+    width: 60%;
+    padding: 25px;
+    padding-right: 50px;
+
+}
+
+.i-imagen-img img{
+
+    border: 7px solid var(--vg-primary-str);
+    border-radius: 7px;
+
+}
+
+
+@keyframes movimiento-derecha {
+
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes movimiento-izquierda {
+
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.i-imagen-texto.visibleImg{
+
+    animation: movimiento-derecha 1s ease forwards;
+
+}
+
+.i-imagen-img.visibleImg{
+
+    animation: movimiento-derecha 1s ease forwards;
+
+}
+
+
+.i-imagen-texto.visibleImg2{
+
+    animation: movimiento-izquierda 1s ease forwards;
+
+}
+
+.i-imagen-img.visibleImg2{
+
+    animation: movimiento-izquierda 1s ease forwards;
+
+}
+
+
+.i-imagen-texto.visibleImg3{
+
+    animation: movimiento-derecha 1s ease forwards;
+
+}
+
+
+.i-imagen-img.visibleImg3{
+
+    animation: movimiento-izquierda 1s ease forwards;
+
+}
+
+.margin-bottom{
+    margin-bottom: 150px;
 }

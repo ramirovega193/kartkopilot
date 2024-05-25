@@ -11,6 +11,7 @@
     -moz-user-select: none;  
     -ms-user-select: none; 
     border: 2px groove var(--vg-secundary-a);
+    color: var(--vg-secundary);
 
 }
 .vg-card-body{

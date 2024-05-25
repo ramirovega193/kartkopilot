@@ -1,18 +1,16 @@
 :root{
-    --vg-primary:#2D6073;
-    --vg-primary-h: #224a58 ;
-    --vg-primary-a: #193944 ;
-    --vg-secundary: #f1f5e6 ;
-    --vg-secundary-bg: #b5e8c3 ;
-    --vg-secundary-h: #8eb999 ;
-    --vg-secundary-a: #71947a ;
-    --vg-primary-str:#1f192f;
+    --vg-primary:#25857d;
+    --vg-primary-h: #1e645e ;
+    --vg-primary-a: #0f4641 ;
+    --vg-secundary: #d4cdad ;
+    --vg-secundary-bg: #bd3737 ;
+    --vg-secundary-h: #8b2525 ;
+    --vg-secundary-a: #661b1b ;
+    --vg-primary-str:#255085;
     --vg-secundary-o:#0F0F0F;
-    --vg-primary-str-h:#31274d;
-    --vg-primary-bg:#65b8a6;
+    --vg-primary-str-h:#193a63;
+    --vg-primary-bg:#98c3a1;
     --vg-darkMode-bg:#161a1b;
-}
-html{
 }
 *{
     margin: 0px;
@@ -38,4 +36,5 @@ html{
 .body-background{
     background-color: var(--vg-secundary);
     scrollbar-gutter: both;
+    overflow-x: hidden;
 }
