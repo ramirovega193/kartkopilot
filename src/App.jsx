@@ -1,33 +1,67 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {CardWithIcon} from "./components/card/card"
+import { FaGear } from "react-icons/fa6";
+import { Boton } from "./components/button/button"
+import { useInView } from 'react-intersection-observer';
+
+function SectionCards(){
+
+    const [ref,inView] = useInView();
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(()=>{
+
+        if(inView && isVisible === false) {
+          setIsVisible(!isVisible)
+        }else if(inView === false && isVisible === true){
+          setIsVisible(!isVisible)
+        }
+
+    },[inView, isVisible]);
+
+
+  return<>
+      <section>
+        <div className="contenedor-cartas">
+          <div ref={ref} className={`inicio-cards ${isVisible ? 'visible' : ''}`}>
+            <CardWithIcon cont="Guarda la informacion que necesitas para tus carreras facilmente"><FaGear size={40}/></CardWithIcon>
+            <CardWithIcon cont="Guarda la informacion que necesitas para tus carreras facilmente"><FaGear size={40}/></CardWithIcon>
+            <CardWithIcon cont="Guarda la informacion que necesitas para tus carreras facilmente"><FaGear size={40}/></CardWithIcon>
+          </div>
+        </div>
+      </section>
+      </>
+}
+
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <>    
+
+      <header>
+        <div className="contenedor-header">
+          <div className="header-buttons">
+            <div className="cont-buttons">
+              <Boton conte="Iniciar sesion" format="vacio" color="secundary-o" />
+              <Boton conte="Registrarse" format="vacio" color="secundary-o" />
+            </div>
+          </div>
+          <div className="header-image">
+              <div className="cont-image">
+                <img className="inicio-imagen"src="./assets/Logos/KartKopilot.svg" alt="inicio imagen" />
+              </div>
+          </div>
+        </div>
+      </header> 
+
+      <SectionCards />
+
     </>
   )
 }

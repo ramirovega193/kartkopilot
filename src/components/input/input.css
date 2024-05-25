@@ -1,0 +1,126 @@
+.vg-input{
+    outline: none;
+    border: 2px solid var(--vg-primary);
+    border-radius: 7px;
+    padding: 0 15px;
+    margin: 0 10px;
+    font-size: 30px;
+    height: 55px;
+    box-sizing: border-box;
+    background-color: transparent;
+    z-index: 111;
+}
+.vg-cont-input{
+    position: relative;
+}
+.vg-label{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-size: 20px;
+    background-color: transparent;
+    transition: 0.2s ease;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: var(--vg-primary);
+    z-index: -1000;
+    user-select: none;
+}
+
+.vg-input:focus + .vg-label,
+.vg-input:valid + .vg-label{
+
+    transform: translate(-20px,-30px) scale(0.75);
+    background-color: white;
+    z-index: 111;
+
+}
+.vg-cont-input-i{
+    position: relative;
+}
+.vg-input-i{
+
+    outline: none;
+    border: 2px solid var(--vg-primary);
+    border-radius: 7px;
+    padding: 0 60px;
+    margin: 0 10px;
+    font-size: 30px;
+    height: 55px;
+    box-sizing: border-box;
+    background-color: transparent;
+    z-index: 111;
+    width: 390px;
+}
+.vg-input-i::placeholder{
+    color: var(--vg-primary);
+    font-size: 20px;
+}
+.vg-label-i{
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    transition: 0.2s ease;
+    padding: 0 5px;
+    color: var(--vg-primary);
+    z-index: -1000;
+    border-right: 1px solid var(--vg-primary);
+    height: 24px;
+    width: 24px;
+}
+
+.vg-cont-select{
+    position: relative;
+    margin: 5px;
+}
+
+.vg-Select{
+
+    padding: 20px;
+    padding-right: 100px;
+    background-color: transparent;
+    border: 1px solid var(--vg-primary);
+    color: var(--vg-primary);
+    font-size: 20px;
+    border-radius: 10px;
+    appearance: none;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+
+}
+.vg-Select:hover{
+    box-shadow: 1px 1px 5px 5px var(--vg-primary);
+}
+
+.vg-Select:focus{
+
+    background-color: var(--vg-primary-h);
+    color:var(--vg-secundary);
+    box-shadow: 1px 1px 5px 5px var(--vg-primary);
+    border: 1px solid var(--vg-secundary);
+}
+
+.vg-s-options{
+    background-color:var(--vg-secundary);
+    color: var(--vg-primary);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.vg-cont-icon{
+
+    position: absolute;
+    top: 22px;
+    left: 160px;
+    z-index: -10; 
+    color: var(--vg-primary);
+
+}
+.vg-Select:focus + .vg-cont-icon{
+
+    color: var(--vg-secundary);
+    z-index: 1;
+    transform: translate(-2px,-2px) rotate(90deg);   
+}

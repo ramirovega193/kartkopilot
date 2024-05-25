@@ -1,0 +1,29 @@
+.kk-button{
+
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.vacio.secundary-o{
+
+    background-color: transparent;
+    color: var(--vg-primary-str);
+    border: 5px solid var(--vg-primary-str);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.vacio.secundary-o:hover{
+
+    background-color: var(--vg-primary-str);
+    color: white;
+
+}
+.vacio.secundary-o:active{
+
+    background-color: var(--vg-primary-str-h);
+
+}
