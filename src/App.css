@@ -68,15 +68,25 @@
 .inicio-cards{
     display: flex;
     padding: 10px;
+}
+.cards{
+    margin: 20px;
     justify-content: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
 }
-.inicio-cards.visible{
+
+.cards.visible{
     opacity: 1;
     transform: translateY(0);
 }
-.vg-card{
-    width: 20%;
-    margin: 20px;
+.card1{
+    transition-delay: 0.3s;
+}
+.card2{
+    transition-delay: 0.5s;
+}
+.card3{
+    transition-delay: 0.7s;
 }

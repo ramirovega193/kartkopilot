@@ -26,10 +26,20 @@ function SectionCards(){
   return<>
       <section>
         <div className="contenedor-cartas">
-          <div ref={ref} className={`inicio-cards ${isVisible ? 'visible' : ''}`}>
+          <div ref={ref} className='inicio-cards'>
+
+          <div className={`cards card1 ${isVisible ? 'visible' : ''}`}>
             <CardWithIcon cont="Guarda la informacion que necesitas para tus carreras facilmente"><FaGear size={40}/></CardWithIcon>
+          </div>
+
+          <div className={`cards card2 ${isVisible ? 'visible' : ''}`}>
             <CardWithIcon cont="Guarda la informacion que necesitas para tus carreras facilmente"><FaGear size={40}/></CardWithIcon>
+          </div>
+
+          <div className={`cards card3 ${isVisible ? 'visible' : ''}`}>
             <CardWithIcon cont="Guarda la informacion que necesitas para tus carreras facilmente"><FaGear size={40}/></CardWithIcon>
+          </div>
+
           </div>
         </div>
       </section>
